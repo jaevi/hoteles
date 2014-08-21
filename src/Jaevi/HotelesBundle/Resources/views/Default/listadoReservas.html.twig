@@ -1,0 +1,12 @@
+{% include 'JaeviHotelesBundle:Default:header.html.twig' %}
+
+{% for reserva in reservas %}
+    <section>
+        <b>Referencia:</b> {{ reserva.id  }}<br>
+        <b>Fecha de realización de la reserva:</b> {{ reserva.fechaReserva |date("d/M/Y") }}<br>
+        <b>Fecha inicio:</b> {{ reserva.fechaInicio |date("d/M/Y") }}<br>
+        <b>Fecha fin:</b> {{ reserva.fechaFin |date("d/M/Y") }}<br>
+        <b>Referencia habitación:</b> {{ reserva.habitacion.id }}<br>
+        <br>
+    </section>
+{% endfor %}

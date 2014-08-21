@@ -1,0 +1,12 @@
+{% include 'JaeviHotelesBundle:Default:header.html.twig' %}
+
+{% for habitacion in habitaciones %}
+    <section>
+        <b>Referencia:</b> {{ habitacion.id  }}<br>
+        <b>Descripción:</b> {{ habitacion.descripcion }}<br>
+        <b>Nº de personas:</b> {{ habitacion.noPersonas  }}<br>
+        <b>Precio:</b> {{ habitacion.precio }}<br>
+        <b>Hotel:</b> {{ habitacion.hotel.nombre }}<br>
+        <br>
+    </section>
+{% endfor %}

@@ -1,0 +1,5 @@
+jaevi_hoteles:
+    resource: "@JaeviHotelesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

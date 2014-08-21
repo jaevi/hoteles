@@ -1,0 +1,62 @@
+{% include 'JaeviHotelesBundle:Default:header.html.twig' %}
+
+Bienvenido<br>
+Búsqueda:<br>
+<br>
+
+TODO
+
+<br><br>
+<h1>EJERCICIO 2</h1>
+<br>
+1 - Daily sales report.<br>
+Consultar la tabla reservas y habitaciones, filtrando por fecha hoy, y sumar los precios de las habitaciones
+<br>
+2 - Best performer hotels of the day.<br>
+Sobre la consulta anterior, agrupar por habitaciones.hotel_id y ordenar por el precio más alto
+<br>
+3 - Weekly accumulated sales.<br>
+Sobre la primera consulta, ampliar el rango de fechas a la semana actual
+<br>
+
+<br><br>
+<h1>EJERCICIO PARÉNTESIS</h1>
+<br>
+
+<pre>
+/** CLASE **/
+class Cadena {
+
+	var $cadena;
+
+	function get_cadena(){
+		return $this->cadena;
+	}
+
+	function set_cadena($cadena){
+		$this->cadena=$cadena;
+	}
+
+	function comprobar_parentesis($cadena) {
+		return (substr_count($cadena, "(") != substr_count($cadena, ")")) ? "Exception Mismatched Parenthesis" : "Successful";
+	}
+
+	function comprobar_cadena() {
+		echo "Entrada: ".$this->cadena;
+		echo "Salida: ".$this->comprobar_parentesis($this->cadena);
+	}
+}
+/** FIN CLASE **/
+
+
+/** COMPROBACIÓN **/
+
+$cadena= new Cadena();
+
+$cadena->set_cadena("Hello (my name) is (Josh");
+$cadena->comprobar_cadena();
+
+$cadena->set_cadena("Hello (my name) is (())Josh");
+$cadena->comprobar_cadena();
+/** FIN COMPROBACIÓN **/
+</pre>
